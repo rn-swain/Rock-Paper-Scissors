@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="red-orange-theme">
+    <div class="game-container">
+        <header class="game-header">
+            <a href="https://github.com/yourusername/your-repo" class="github-corner" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <h1>Rock Paper Scissors</h1>
+            <div class="score-display">
+                <div class="score-box player">
+                    <span>YOU</span>
+                    <div class="score">0</div>
+                </div>
+                <div class="score-box computer">
+                    <span>COM</span>
+                    <div class="score">0</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="choices">
+                <button class="choice-btn" data-choice="rock">
+                    <div class="choice-circle">
+                        <i class="fas fa-hand-rock"></i>
+                    </div>
+                    <span>Rock</span>
+                </button>
+                <button class="choice-btn" data-choice="paper">
+                    <div class="choice-circle">
+                        <i class="fas fa-hand-paper"></i>
+                    </div>
+                    <span>Paper</span>
+                </button>
+                <button class="choice-btn" data-choice="scissors">
+                    <div class="choice-circle">
+                        <i class="fas fa-hand-scissors"></i>
+                    </div>
+                    <span>Scissors</span>
+                </button>
+            </div>
+
+            <div class="battle-area">
+                <div class="battle-choice player-choice">
+                    <div class="choice-placeholder">
+                        <i class="fas fa-question"></i>
+                    </div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="battle-choice computer-choice">
+                    <div class="choice-placeholder">
+                        <i class="fas fa-question"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-message">
+                <p>Select your move to begin!</p>
+            </div>
+        </main>
+
+        <footer class="game-footer">
+            <button class="reset-btn" id="reset-btn">
+                <i class="fas fa-redo"></i> Reset Game
+            </button>
+            <div class="game-info">
+                <p>First to score 5 points wins the game</p>
+            </div>
+        </footer>
+
+        <div class="modal-overlay hidden">
+            <div class="modal">
+                <h2 class="modal-title"></h2>
+                <p class="modal-message"></p>
+                <button class="modal-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
